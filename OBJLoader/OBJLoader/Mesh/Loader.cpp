@@ -154,6 +154,7 @@ Mesh* Loader::LoadOBJ(const char* fileName)
         }
       }
     }
+
     getline(objStream, line);
   }
 

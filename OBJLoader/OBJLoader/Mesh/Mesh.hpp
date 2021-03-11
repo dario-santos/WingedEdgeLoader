@@ -1,5 +1,7 @@
 #pragma once
 
+#include <GL/glew.h>
+
 #include <string>
 using std::string;
 
@@ -17,7 +19,18 @@ public:
   vector<Edge*> edges;
   vector<Face*> faces;
 
+
+  // Mesh VAO
+  GLuint meshVAO = 0;
+  GLuint verticeBufferId = 0;
+
+
   Mesh(vector<Vertex*> vertices, vector<Edge*> edges, vector<Face*> faces);
+
+  void StoreVBO();
+
+  void Render();
+
 
   string ToString();
 };
